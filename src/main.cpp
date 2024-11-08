@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
-#include "SelectionSort.h"
-#include "QuickSort.h"
-#include "MergeSort.h"
-#include "InsertionSort.h"
-#include "BubbleSort.h"
+#include "../include/SelectionSort.h"
+#include "../include/QuickSort.h"
+#include "../include/MergeSort.h"
+#include "../include/InsertionSort.h"
+#include "../include/BubbleSort.h"
 
 void printArray(const std::vector<int>& arr) {
     for (int i : arr) {

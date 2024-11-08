@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "InsertionSort.h"
+#include "../include/InsertionSort.h"
 
 
 void InsertionSort::insertionSort(std::vector<int>& arr) {

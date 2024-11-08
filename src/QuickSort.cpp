@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "QuickSort.h"
+#include "../include/QuickSort.h"
 
 
 // Partition iþlemi: Pivot seçimi ve elemanlarýn düzenlenmesi

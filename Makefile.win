@@ -1,0 +1,43 @@
+# Project: SortingAlgorithms
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = build/main.o build/BubbleSort.o build/InsertionSort.o build/MergeSort.o build/QuickSort.o build/SelectionSort.o
+LINKOBJ  = build/main.o build/BubbleSort.o build/InsertionSort.o build/MergeSort.o build/QuickSort.o build/SelectionSort.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = build/SortingAlgorithms.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11
+CFLAGS   = $(INCS) -std=gnu++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+build/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o build/main.o $(CXXFLAGS)
+
+build/BubbleSort.o: src/BubbleSort.cpp
+	$(CPP) -c src/BubbleSort.cpp -o build/BubbleSort.o $(CXXFLAGS)
+
+build/InsertionSort.o: src/InsertionSort.cpp
+	$(CPP) -c src/InsertionSort.cpp -o build/InsertionSort.o $(CXXFLAGS)
+
+build/MergeSort.o: src/MergeSort.cpp
+	$(CPP) -c src/MergeSort.cpp -o build/MergeSort.o $(CXXFLAGS)
+
+build/QuickSort.o: src/QuickSort.cpp
+	$(CPP) -c src/QuickSort.cpp -o build/QuickSort.o $(CXXFLAGS)
+
+build/SelectionSort.o: src/SelectionSort.cpp
+	$(CPP) -c src/SelectionSort.cpp -o build/SelectionSort.o $(CXXFLAGS)

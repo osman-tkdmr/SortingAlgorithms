@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include "BubbleSort.h"
+#include "../include/BubbleSort.h"
 	
 void BubbleSort::bubbleSort(std::vector<int>& arr){
 	for(int i = 0; i < arr.size(); i++){
