@@ -5,6 +5,7 @@
 #include "../include/MergeSort.h"
 #include "../include/InsertionSort.h"
 #include "../include/BubbleSort.h"
+#include "../include/CountingSort.h"
 
 void printArray(const std::vector<int>& arr) {
     for (int i : arr) {
@@ -28,21 +29,32 @@ int main() {
 
     QuickSort qs;
     arr = unsorting_arr;
-    std::cout << "Quick Sort - Siralanmamis dizi: ";
+    std::cout << "Quick Sort     - Siralanmamis dizi: ";
     printArray(arr);
     qs.quickSort(arr, 0, arr.size() - 1);
-    std::cout << "Quick Sort - Siralanmis dizi:   ";
+    std::cout << "Quick Sort     - Siralanmis dizi:   ";
     printArray(arr);
     
     
     MergeSort ms;
     arr = unsorting_arr;
-    std::cout << "Quick Sort - Siralanmamis dizi: ";
+    std::cout << "Merge Sort     - Siralanmamis dizi: ";
     printArray(arr);
     ms.mergeSort(arr, 0, arr.size() - 1);
-    std::cout << "Quick Sort - Siralanmis dizi:   ";
+    std::cout << "Merge Sort     - Siralanmis dizi:   ";
     printArray(arr);
-
+	
+	
+	CountingSort cs;
+    arr = unsorting_arr;
+    std::cout << "Counting Sort  - Siralanmamis dizi: ";
+    printArray(arr);
+    cs.countingSort(arr);
+    std::cout << "Counting Sort  - Siralanmis dizi:   ";
+    printArray(arr);
+    int a;
+    std::cin >> a; 
+    
     return 0;
 }
 

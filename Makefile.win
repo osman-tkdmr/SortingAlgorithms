@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = build/main.o build/BubbleSort.o build/InsertionSort.o build/MergeSort.o build/QuickSort.o build/SelectionSort.o
-LINKOBJ  = build/main.o build/BubbleSort.o build/InsertionSort.o build/MergeSort.o build/QuickSort.o build/SelectionSort.o
+OBJ      = build/main.o build/BubbleSort.o build/InsertionSort.o build/MergeSort.o build/QuickSort.o build/SelectionSort.o build/CountingSort.o
+LINKOBJ  = build/main.o build/BubbleSort.o build/InsertionSort.o build/MergeSort.o build/QuickSort.o build/SelectionSort.o build/CountingSort.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -41,3 +41,6 @@ build/QuickSort.o: src/QuickSort.cpp
 
 build/SelectionSort.o: src/SelectionSort.cpp
 	$(CPP) -c src/SelectionSort.cpp -o build/SelectionSort.o $(CXXFLAGS)
+
+build/CountingSort.o: src/CountingSort.cpp
+	$(CPP) -c src/CountingSort.cpp -o build/CountingSort.o $(CXXFLAGS)
